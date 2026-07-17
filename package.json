@@ -1,0 +1,10 @@
+{
+  "name": "whatsapp-gestor-seguro",
+  "private": true,
+  "scripts": {
+    "check": "npm --prefix worker run check",
+    "dev:worker": "npm --prefix worker run dev",
+    "deploy:worker": "npm --prefix worker run deploy"
+  }
+}
+

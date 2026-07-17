@@ -1,0 +1,12 @@
+name = "robustti-whatsapp-seguro"
+main = "src/index.ts"
+compatibility_date = "2026-07-01"
+
+[triggers]
+crons = ["* * * * *"]
+
+[vars]
+ZERO_COST_MODE = "true"
+
+# Cadastre os demais valores com `npx wrangler secret put NOME_DO_SEGREDO`.
+

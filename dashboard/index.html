@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="referrer" content="no-referrer" />
+  <title>Robustti WhatsApp Seguro</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="shell">
+    <header><div><span class="eyebrow">ROBUSTTI TECNOLOGIA</span><h1>WhatsApp Seguro</h1></div><button id="logout" class="ghost hidden">Sair</button></header>
+    <section id="login" class="card login">
+      <h2>Acesso protegido</h2><p>Entre com o usuário criado no Supabase.</p>
+      <form id="loginForm"><label>E-mail<input id="email" type="email" required /></label><label>Senha<input id="password" type="password" required /></label><button>Entrar</button></form>
+    </section>
+    <section id="app" class="hidden">
+      <div class="notice"><strong>Modo Custo Zero ativo</strong><span>Mensagens fora da janela gratuita são bloqueadas automaticamente.</span></div>
+      <div class="stats"><article><span>Contatos ativos</span><b id="contactCount">0</b></article><article><span>Pendentes</span><b id="pendingCount">0</b></article><article><span>Enviadas hoje</span><b id="sentCount">0</b></article></div>
+      <div class="grid">
+        <section class="card"><h2>Novo contato</h2><form id="contactForm"><label>Nome<input id="contactName" required maxlength="120" /></label><label>WhatsApp com DDI<input id="contactPhone" placeholder="5527999999999" required /></label><label class="check"><input id="contactConsent" type="checkbox" required /> Tenho consentimento registrado deste contato</label><button>Salvar contato</button></form></section>
+        <section class="card"><h2>Nova mensagem</h2><form id="queueForm"><label>Contato<select id="queueContact" required></select></label><label>Mensagem<textarea id="message" required maxlength="4096" placeholder="Olá, {{nome}}! Como posso ajudar?"></textarea></label><button>Adicionar à fila</button></form></section>
+      </div>
+      <section class="card"><div class="sectionTitle"><h2>Fila de envios</h2><button id="refresh" class="ghost">Atualizar</button></div><div class="tableWrap"><table><thead><tr><th>Contato</th><th>Mensagem</th><th>Agendado</th><th>Status</th></tr></thead><tbody id="queueRows"></tbody></table></div></section>
+    </section>
+    <div id="toast" aria-live="polite"></div>
+  </main>
+  <script src="config.js"></script>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
+
